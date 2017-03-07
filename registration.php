@@ -134,7 +134,7 @@ form#register-form select {
 		        	$message .= 'Please click on this link below to activate your account: ' . " ";
 					$message .= get_site_url() . '/activate?uid=' . $user . '&secret_code=' . $secret_code;
 					$url = "http://bulk.sms-india.in/unified.php?usr=28790&pwd=udaipur123&ph=".$phone_number."&sndr=DAILYL&text=$message";
-			  		file_get_contents($url);
+			  		@file_get_contents($url);
 			        echo 'Registration complete. Please check your sms message to activate your account.';   
 			        // echo 'Registration complete. Please check your sms message to activate your account. Goto <a href="' . $_POST['doc_url'] . '">Document page</a>.';   
 			    }

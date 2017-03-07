@@ -406,3 +406,9 @@ function lawyeria_lite_default_title( $title ) {
 	return $title;
 }
 add_filter('widget_text', 'do_shortcode');
+
+//allow redirection, even if my theme starts to send output to the browser
+add_action('init', 'do_output_buffer');
+function do_output_buffer() {
+    ob_start();
+}
