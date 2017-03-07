@@ -13,7 +13,7 @@
 					</h3><!--/h3-->
 				</div><!--/div .wrapper-->
 			</section><!--/section .wide-nav-->
-		</header>
+		
 		<section id="content">
 			<div class="wrapper cf">
 				<div id="posts">

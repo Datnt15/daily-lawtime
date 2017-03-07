@@ -110,8 +110,8 @@ function lawyeria_lite_slug_fonts_url() {
  *  WP Enqueue Script
  */
 function lawyeria_lite_enqueue_scripts() {
+    wp_enqueue_style('lawyeria-lite-bootstrap-css', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', array(), null);
     wp_enqueue_style('lawyeria_lite_font', lawyeria_lite_slug_fonts_url(), array(), null );
-    // wp_enqueue_style('lawyeria-lite-bootstrap-css', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', array(), null);
 
 
     wp_enqueue_script( 'lawyeria_lite_fancybox_script', get_template_directory_uri() . '/js/jquery.fancybox.js', array( 'jquery' ), '1.0', true );

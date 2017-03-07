@@ -84,3 +84,63 @@
 						<img src="<?php header_image(); ?>" alt="" class="lawyeria-lite-header-image" />
 				<?php endif; ?>
 			</div>	
+			<?php if ( get_option( 'show_on_front' ) == 'page' ){?>
+  			<section class="wide-nav">
+				<div class="wrapper">
+					<h3>
+						<?php the_title(); ?>
+					</h3><!--/h3-->
+				</div><!--/div .wrapper-->
+			</section><!--/section .wide-nav-->
+		</header><!--/header-->
+		<?php } else { ?>
+			<div id="subheader" style="background-image: url('<?php
+				if ( get_theme_mod( 'lawyeria_lite_frontpage_subheader_bg', get_template_directory_uri() . "/images/full-header.jpg" ) ) {
+				    echo get_theme_mod( 'lawyeria_lite_frontpage_subheader_bg',get_template_directory_uri() . "/images/full-header.jpg" );
+			     }
+			 ?>');">
+				<div class="subheader-color cf">
+					<div class="wrapper cf">
+						<div class="full-header-content full-header-content-no-sidebar">
+							
+								<?php
+									if ( get_theme_mod( 'lawyeria_lite_frontpage_header_title','Lorem ipsum dolor sit amet, consectetur adipscing elit.' ) ) {
+										echo '<h3>';
+										echo get_theme_mod( 'lawyeria_lite_frontpage_header_title','Lorem ipsum dolor sit amet, consectetur adipscing elit.' );
+										echo '</h3>';
+									}
+								?>
+							
+								<?php
+									if ( get_theme_mod( 'lawyeria_lite_frontpage_header_content','Ut fermentum aliquam neque, sit amet molestie orci porttitor sit amet. Mauris venenatis et tortor ut ultrices. Nam a neque venenatis, tristique lacus id, congue augue. In id tellus lacus. In porttitor sagittis tellus nec iaculis. Nunc sem odio, placerat a diam vel, varius.' )) {
+										echo '<p>';
+											echo get_theme_mod( 'lawyeria_lite_frontpage_header_content','Ut fermentum aliquam neque, sit amet molestie orci porttitor sit amet. Mauris venenatis et tortor ut ultrices. Nam a neque venenatis, tristique lacus id, congue augue. In id tellus lacus. In porttitor sagittis tellus nec iaculis. Nunc sem odio, placerat a diam vel, varius.' );
+										echo '</p>';	
+									}
+								?>
+						</div><!--/div .header-content-->
+					</div><!--/div .wrapper-->
+				</div><!--/div .full-header-color-->
+				<div class="second-subheader">
+					<div class="wrapper">
+						<h3>
+							<?php
+								the_title( );
+								// if ( get_theme_mod( 'lawyeria_lite_frontpage_subheader_title','Lorem Ipsum is simply dummy text of the printing and type setting industry.' ) ) {
+								// 	echo get_theme_mod( 'lawyeria_lite_frontpage_subheader_title','Lorem Ipsum is simply dummy text of the printing and type setting industry.' );
+								// }
+							?>
+						</h3><!--/h3-->
+					</div><!--/div .wrapper-->
+				</div><!--/div .second-subheader-->
+			</div><!--/div #subheader-->
+		</header><!--/header-->
+		<?php } ?>
+<style type="text/css">
+	body {
+    	background: #f3f3f3;
+	}
+	.smform-control{
+		height: auto;
+	}
+</style>

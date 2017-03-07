@@ -44,12 +44,6 @@ form#register-form select {
     border-radius: 0;
 }
 
-
-form#register-form input[type='text'],
-form#register-form input[type='password'],
-form#register-form input[type='email']{
-	width: 95%;
-}
 .button-primary {
     border-radius: 0 !important;
     background: #0085ba !important;
@@ -171,7 +165,7 @@ form#register-form input[type='email']{
 					<?php 
 					global $wpdb;
 					$args = array(
-						'post_type' => 'plan',
+						'post_type' => 'tcpricingtable',
 						'orderby'   => 'date',
 						'order'     => 'ASC'
 					);
