@@ -420,3 +420,13 @@ add_action('init', 'do_output_buffer');
 function do_output_buffer() {
     ob_start();
 }
+
+/* AJAX handle*/
+add_action('wp_head', 'print_global_vars');
+function print_global_vars() {
+   echo '<script type="text/javascript">
+           // var tempo_theme_ajax = "' . admin_url('admin-ajax.php') . '";
+           var base_url = "' . get_site_url() . '/";
+           var _uid = ' . (( is_user_logged_in() ) ? get_current_user_id() : 0) . ';
+         </script>';
+}
