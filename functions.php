@@ -63,6 +63,10 @@ add_action( 'after_setup_theme', 'lawyeria_lite_theme_setup' );
 function lawyeria_lite_enqueue_style() {
     wp_enqueue_style( 'lawyeria_lite_style', get_stylesheet_uri(), array(), '1.0' );
     wp_enqueue_style( 'lawyeria_lite_fancybox', get_template_directory_uri() . '/css/jquery.fancybox.css', array(), '1.0' );
+    wp_enqueue_style('lawyeria-lite-bootstrap-css', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', array(), '3.3.7');
+    wp_enqueue_style('lawyeria-lite-bootstrap-theme-css', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css', array(), '3.3.7');
+    wp_enqueue_style('lawyeria-lite-chosen-css', get_template_directory_uri() . '/css/chosen.min.css', array(), '1.4.2');
+    wp_enqueue_style('lawyeria-lite-custom-css', get_template_directory_uri() . '/css/custom.css', array(), '1.4.2');
 }
 
 add_action( 'wp_enqueue_scripts', 'lawyeria_lite_enqueue_style' );
@@ -110,14 +114,18 @@ function lawyeria_lite_slug_fonts_url() {
  *  WP Enqueue Script
  */
 function lawyeria_lite_enqueue_scripts() {
-    wp_enqueue_style('lawyeria-lite-bootstrap-css', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', array(), null);
+    
     wp_enqueue_style('lawyeria_lite_font', lawyeria_lite_slug_fonts_url(), array(), null );
 
 
-    wp_enqueue_script( 'lawyeria_lite_fancybox_script', get_template_directory_uri() . '/js/jquery.fancybox.js', array( 'jquery' ), '1.0', true );
+    wp_enqueue_script( 'lawyeria_lite_fancybox_script', get_template_directory_uri() . '/js/jquery.fancybox.js', array( 'jquery','jquery-ui-accordion','jquery-ui-datepicker' ), '1.0', true );
     wp_enqueue_script( 'lawyeria_lite_masonry', get_template_directory_uri() . '/js/jquery.masonry.js', array( 'jquery' ), '1.0', true );
+    wp_enqueue_script( 'lawyeria_lite_chosen_script', get_template_directory_uri() . '/js/chosen.jquery.min.js', array( 'jquery' ), '1.0', true );
     wp_enqueue_script( 'lawyeria_lite_scripts', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), '1.0', true );
+    wp_enqueue_script( 'lawyeria_lite_bootstrap_script', "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", array( 'jquery' ), '3.3.7', true );
     if ( is_singular() ) wp_enqueue_script( "comment-reply" );
+    wp_register_style('jquery-ui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css');
+    wp_enqueue_style( 'jquery-ui' );   
 }
 
 add_action( 'wp_enqueue_scripts', 'lawyeria_lite_enqueue_scripts' );

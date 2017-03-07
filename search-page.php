@@ -794,13 +794,7 @@
 		jQuery(".multipleChosen").chosen({
 		      placeholder_text_multiple: "Choose anything" //placeholder
 			});
-		jQuery(".date").daterangepicker({
-			singleDatePicker: true,
-	        showDropdowns: true,
-            locale: {
-                format: 'DD-MM-YYYY'
-            }
-        }).val('');
+		jQuery(".date").datepicker("option", "dateFormat", "dd-mm-yyyy");
 		jQuery('#accordion .panel-title a').on('click', function(event) {
 			$(".panel-heading.active").removeClass('active');
 			$(this).parent().parent().toggleClass('active');
