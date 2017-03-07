@@ -13,6 +13,7 @@ form#register-form {
     padding: 25px;
     background: #fff;
     border: 1px solid #ddd;
+    margin-top: -60px;
 }
 
 form#register-form p {
@@ -55,7 +56,6 @@ form#register-form select {
 </style>
 <div id="content">
 	<div class="container">
-		<h3 class="text-center">Registration Page</h3>
 		<form action="" method="post" id="register-form">
 		<?php
 		if (isset($_POST['username'])) {
