@@ -78,22 +78,12 @@
 		    </div>
 			<div class="wrapper">
 			<?php 
-					$has_header = get_header_image(); 
-					if( $has_header ) :
-					?>
-						<img src="<?php header_image(); ?>" alt="" class="lawyeria-lite-header-image" />
+				$has_header = get_header_image(); 
+				if( $has_header ) :?>
+					<img src="<?php header_image(); ?>" alt="" class="lawyeria-lite-header-image" />
 				<?php endif; ?>
 			</div>	
-			<?php if ( get_option( 'show_on_front' ) == 'page' ){?>
-  			<section class="wide-nav">
-				<div class="wrapper">
-					<h3>
-						<?php the_title(); ?>
-					</h3><!--/h3-->
-				</div><!--/div .wrapper-->
-			</section><!--/section .wide-nav-->
-		</header><!--/header-->
-		<?php } else { ?>
+			
 			<div id="subheader" style="background-image: url('<?php
 				if ( get_theme_mod( 'lawyeria_lite_frontpage_subheader_bg', get_template_directory_uri() . "/images/full-header.jpg" ) ) {
 				    echo get_theme_mod( 'lawyeria_lite_frontpage_subheader_bg',get_template_directory_uri() . "/images/full-header.jpg" );
@@ -102,45 +92,76 @@
 				<div class="subheader-color cf">
 					<div class="wrapper cf">
 						<div class="full-header-content full-header-content-no-sidebar">
-							
-								<?php
-									if ( get_theme_mod( 'lawyeria_lite_frontpage_header_title','Lorem ipsum dolor sit amet, consectetur adipscing elit.' ) ) {
-										echo '<h3>';
-										echo get_theme_mod( 'lawyeria_lite_frontpage_header_title','Lorem ipsum dolor sit amet, consectetur adipscing elit.' );
-										echo '</h3>';
-									}
-								?>
-							
-								<?php
-									if ( get_theme_mod( 'lawyeria_lite_frontpage_header_content','Ut fermentum aliquam neque, sit amet molestie orci porttitor sit amet. Mauris venenatis et tortor ut ultrices. Nam a neque venenatis, tristique lacus id, congue augue. In id tellus lacus. In porttitor sagittis tellus nec iaculis. Nunc sem odio, placerat a diam vel, varius.' )) {
-										echo '<p>';
-											echo get_theme_mod( 'lawyeria_lite_frontpage_header_content','Ut fermentum aliquam neque, sit amet molestie orci porttitor sit amet. Mauris venenatis et tortor ut ultrices. Nam a neque venenatis, tristique lacus id, congue augue. In id tellus lacus. In porttitor sagittis tellus nec iaculis. Nunc sem odio, placerat a diam vel, varius.' );
-										echo '</p>';	
-									}
-								?>
+							<div class="col-xs-8 col-xs-offset-2">
+				                <div class="input-group">
+				                    <input type="text" class="form-control input-search-header" name="" id="key" placeholder="Search">
+				                    <span class="input-group-btn">
+				                        <button class="btn btn-default btn-radius0 law-search" type="button">
+				                            <span class="glyphicon glyphicon-search"></span>
+				                        </button>
+				                    </span>
+				                </div>
+				            </div>
 						</div><!--/div .header-content-->
 					</div><!--/div .wrapper-->
 				</div><!--/div .full-header-color-->
 				<div class="second-subheader">
 					<div class="wrapper">
-						<h3>
-							<?php
-								the_title( );
-								// if ( get_theme_mod( 'lawyeria_lite_frontpage_subheader_title','Lorem Ipsum is simply dummy text of the printing and type setting industry.' ) ) {
-								// 	echo get_theme_mod( 'lawyeria_lite_frontpage_subheader_title','Lorem Ipsum is simply dummy text of the printing and type setting industry.' );
-								// }
-							?>
-						</h3><!--/h3-->
+						<h3><?php the_title( ); ?> </h3>
 					</div><!--/div .wrapper-->
 				</div><!--/div .second-subheader-->
 			</div><!--/div #subheader-->
 		</header><!--/header-->
-		<?php } ?>
-<style type="text/css">
-	body {
-    	background: #f3f3f3;
-	}
-	.smform-control{
-		height: auto;
-	}
-</style>
+			
+		<style type="text/css">
+			body {
+		    	background: #f3f3f3;
+			}
+			.smform-control{
+				height: auto;
+			}
+			.button-primary {
+			    border-radius: 0 !important;
+			    background: #0085ba !important;
+			    color: white !important;
+			    padding: 10px 20px;
+			    border: 1px solid #ccc;
+			    cursor: pointer;
+			}
+		</style>
+		<?php if (!is_user_logged_in()) : ?>
+
+            <!-- Modal -->
+            <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title text-left" id="loginModalLabel">Login</h4>
+                        </div>
+                        <div class="modal-body text-left">
+                            <?php 
+                            $args = array(
+                                'echo'           => true,
+                                'remember'       => true,
+                                'redirect'       => ( is_ssl() ? 'https://' : 'http://' ) . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'],
+                                'form_id'        => 'loginform',
+                                'id_username'    => 'user_login',
+                                'id_password'    => 'user_pass',
+                                'id_remember'    => 'rememberme',
+                                'id_submit'      => 'wp-submit',
+                                'label_username' => __( 'Username' ),
+                                'label_password' => __( 'Password' ),
+                                'label_remember' => __( 'Remember Me' ),
+                                'label_log_in'   => __( 'Log In' ),
+                                'value_username' => '',
+                                'value_remember' => false
+                            );
+                            wp_login_form( $args );
+                             ?>
+                        </div>
+                        <div class="modal-footer"></div>
+                    </div>
+                </div>
+            </div>
+        <?php endif;

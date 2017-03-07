@@ -8,16 +8,8 @@
 		 */
 		get_header();
 		?>
-			<section class="wide-nav">
-				<div class="wrapper">
-					<h3>
-						<?php the_title(); ?>
-					</h3><!--/h3-->
-				</div><!--/div .wrapper-->
-			</section><!--/section .wide-nav-->
-		</header><!--/header-->
 		<section id="content">
-			<div class="wrapper cf">
+			<div class="wrapper cf free_text_search_result">
 				<div id="posts">
 					<?php
 						$args = array (

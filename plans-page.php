@@ -6,7 +6,7 @@
 <?php get_header(); ?>
 <section id="features">
 	<!-- <h1><b>PRICING</b></h1> -->
-	<div class="wrapper cf">
+	<div class="wrapper cf free_text_search_result">
 		<?php 
 		$args = array(
 			'post_type' => 'tcpricingtable',
@@ -20,9 +20,7 @@
 				<div class="features-box">
 					<?php echo do_shortcode( '[tc-pricing-table tableid="'.get_the_ID().'"]' );?>
 				</div>		
-			<?php
-			}
-			
+			<?php }
 		} 
 		?>
 	</div>

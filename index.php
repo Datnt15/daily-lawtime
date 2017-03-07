@@ -15,7 +15,7 @@
 			</section><!--/section .wide-nav-->
 		
 		<section id="content">
-			<div class="wrapper cf">
+			<div class="wrapper cf free_text_search_result">
 				<div id="posts">
 					<?php
 						if ( have_posts() ) : while ( have_posts() ) : the_post();

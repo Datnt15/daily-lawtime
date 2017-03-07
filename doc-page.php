@@ -3,9 +3,14 @@
 * Template Name: Detail Document
 */
 get_header(); ?>
+<style type="text/css">
+	.post p {
+	    margin-bottom: 0px;
+	    margin-top: 0px;
+	}
+</style>
 
-
-<div id="blog-wrapper">
+<div id="blog-wrapper" class="free_text_search_result">
 	<div class="post">
 		<div class="post-info">
 	<?php //echo do_shortcode('[report_step]'); ?>
@@ -214,11 +219,10 @@ get_header(); ?>
 		</form>
 
 		<?php
-		$url = explode('/', $_SERVER['REQUEST_URI']);
 		$args = array(
 			'echo'           => true,
 			'remember'       => true,
-			'redirect'       => home_url('/' . $url[3] . '/' . $url[4]),
+			'redirect'       => ( is_ssl() ? 'https://' : 'http://' ) . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'],
 			'form_id'        => 'loginform',
 			'id_username'    => 'user_login',
 			'id_password'    => 'user_pass',

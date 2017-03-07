@@ -6,16 +6,9 @@
 		 */
 		get_header();
 		?>
-			<section class="wide-nav">
-				<div class="wrapper">
-					<h3>
-						<?php the_search_query(); ?>
-					</h3><!--/h3-->
-				</div><!--/div .wrapper-->
-			</section><!--/section .wide-nav-->
-		</header><!--/header-->
+			
 		<section id="content">
-			<div class="wrapper cf">
+			<div class="wrapper cf free_text_search_result">
 				<div id="posts">
 					<?php
 						if ( have_posts() ) : while ( have_posts() ) : the_post();

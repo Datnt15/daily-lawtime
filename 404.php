@@ -6,22 +6,9 @@
 		 */
 		get_header();
 		?>
-			<section class="wide-nav">
-				<div class="wrapper">
-					
-						<?php
-						if ( get_theme_mod( 'lawyeria_lite_404_title','404 Error' ) ) {
-							echo '<h3>';
-								echo get_theme_mod( 'lawyeria_lite_404_title','404 Error' );
-							echo '</h3>';
-						}
-						?>
-
-				</div><!--/div .wrapper-->
-			</section><!--/section .wide-nav-->
-		</header>
+			
 		<section id="content">
-			<div class="wrapper cf">
+			<div class="wrapper cf free_text_search_result">
 				<div id="posts">
 					<div class="post">
 						<div class="post-excerpt">

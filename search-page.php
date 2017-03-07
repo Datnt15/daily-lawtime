@@ -5,7 +5,7 @@
 ?>
 <?php get_header(); ?>
 
-<div id="wrapper">
+<div id="wrapper" class="free_text_search_result">
 	<!-- Sidebar -->
     <div id="sidebar-wrapper" class="absolute <?php if (is_user_logged_in()) { echo 'is_login_margin'; }?>">
     	<!-- <p class="text-center title-search-list">Types of Search</p> -->
@@ -792,13 +792,14 @@
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
 		jQuery(".multipleChosen").chosen({
-		      placeholder_text_multiple: "Choose anything" //placeholder
-			});
-		jQuery(".date").datepicker("option", "dateFormat", "dd-mm-yyyy");
+		    placeholder_text_multiple: "Choose anything" //placeholder
+		});
+		jQuery(".date").datepicker({
+			dateFormat: "dd-mm-yy"
+		});
 		jQuery('#accordion .panel-title a').on('click', function(event) {
 			$(".panel-heading.active").removeClass('active');
 			$(this).parent().parent().toggleClass('active');
-
 		});
 	});
 </script>

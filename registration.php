@@ -7,55 +7,55 @@
 <?php get_header(); ?>
 <style type="text/css">
 	
-form#register-form {
-    width: 400px;
-    margin: 0 auto;
-    padding: 25px;
-    background: #fff;
-    border: 1px solid #ddd;
-    margin-top: -60px;
-}
+	form#register-form {
+	    width: 400px;
+	    margin: 0 auto;
+	    padding: 25px;
+	    background: #fff;
+	    border: 1px solid #ddd;
+	    margin-top: -60px;
+	}
 
-form#register-form p {
-    margin-top: 0;
-    margin-bottom: 10px;
-    line-height: 30px;
-}
+	form#register-form p {
+	    margin-top: 0;
+	    margin-bottom: 10px;
+	    line-height: 30px;
+	}
 
-form#register-form p label {
-    color: #72777c;
-    font-size: 16px;
-    font-weight: 500;
-    margin-bottom: 0;
-}
+	form#register-form p label {
+	    color: #72777c;
+	    font-size: 16px;
+	    font-weight: 500;
+	    margin-bottom: 0;
+	}
 
-form#register-form input[type='text'],
-form#register-form input[type='password'],
-form#register-form input[type='email'],
-form#register-form select {
-    background: #fbfbfb!important;
-    width: 100%;
-    padding: 10px;
-    margin: 2px 6px 0px 0;
-    border: 1px solid #ddd;
-    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .07);
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .07);
-    color: #32373c;
-    outline: 0;
-    border-radius: 0;
-}
+	form#register-form input[type='text'],
+	form#register-form input[type='password'],
+	form#register-form input[type='email'],
+	form#register-form select {
+	    background: #fbfbfb!important;
+	    width: 100%;
+	    padding: 10px;
+	    margin: 2px 6px 0px 0;
+	    border: 1px solid #ddd;
+	    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .07);
+	    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .07);
+	    color: #32373c;
+	    outline: 0;
+	    border-radius: 0;
+	}
 
-.button-primary {
-    border-radius: 0 !important;
-    background: #0085ba !important;
-    color: white !important;
-    padding: 10px 20px;
-    border: 1px solid #ccc;
-    cursor: pointer;
-}
+	/*.button-primary {
+	    border-radius: 0 !important;
+	    background: #0085ba !important;
+	    color: white !important;
+	    padding: 10px 20px;
+	    border: 1px solid #ccc;
+	    cursor: pointer;
+	}*/
 </style>
 <div id="content">
-	<div class="container">
+	<div class="container free_text_search_result">
 		<form action="" method="post" id="register-form">
 		<?php
 		if (isset($_POST['username'])) {

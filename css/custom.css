@@ -7,7 +7,7 @@
     height: 46px!important;
     border-radius: 0!important;
     border: none!important;
-    background: rgba(255, 255, 255, 0.6)!important;
+    background: rgba(255, 255, 255)!important;
 }
 
 #wrapper {
@@ -1044,4 +1044,11 @@ form#register-form select {
     color: #32373c;
     outline: 0;
     border-radius: 0;
+}
+
+button.btn.btn-default.btn-radius0.law-search {
+    background: #fff;
+    padding: 12px;
+    border: 1px solid #fff;
+    border-left: none;
 }

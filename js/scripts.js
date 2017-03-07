@@ -53,7 +53,7 @@ jQuery(document).ready(function($) {
                 title: jQuery("#key").val()
             },
             function(data) {
-                $(".tempo-section.loop").html(data);
+                $(".free_text_search_result").html(data);
             }
         );
     });
