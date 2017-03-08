@@ -108,6 +108,12 @@
 				<div class="second-subheader">
 					<div class="wrapper">
 						<h3><?php the_title( ); ?> </h3>
+						<?php if ($_SESSION['isset_message']) { ?>
+							<div class="alert alert-<?php echo $_SESSION['message_type']; ?> alert-dismissible" role="alert">
+							  	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							  	<?php echo $_SESSION['flass_message']; ?>
+							</div>
+						<?php } ?>
 					</div><!--/div .wrapper-->
 				</div><!--/div .second-subheader-->
 			</div><!--/div #subheader-->

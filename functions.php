@@ -430,3 +430,14 @@ function print_global_vars() {
            var _uid = ' . (( is_user_logged_in() ) ? get_current_user_id() : 0) . ';
          </script>';
 }
+
+
+function is_user_active(){
+    return get_user_meta(get_current_user_id(), 'state', true) == 'active';
+}
+
+function register_session(){
+    if( !session_id() )
+        session_start();
+}
+add_action('init','register_session');

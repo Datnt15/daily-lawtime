@@ -130,8 +130,8 @@
 		        	add_user_meta( $user, 'state', 'pending', true ); 
 		        	add_user_meta( $user, 'phone_number', $phone_number, true ); 
 		        	// SMS Verify message code go here
-		        	$message = "Hi, $username. Here is the code: " . $secret_code . " to activate your account. ";
-		        	$message .= 'Please click on this link below to activate your account: ' . " ";
+		        	$message = "Hi, $username. ";
+		        	$message .= 'Please click on this link below to activate your account: ';
 					$message .= get_site_url() . '/activate?uid=' . $user . '&secret_code=' . $secret_code;
 					$url = "http://bulk.sms-india.in/unified.php?usr=28790&pwd=udaipur123&ph=".$phone_number."&sndr=DAILYL&text=$message";
 			  		@file_get_contents($url);

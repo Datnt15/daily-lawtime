@@ -10,6 +10,11 @@ $uid = $_GET['uid'];
 $secret_code = $_GET['secret_code'];
 if (get_user_meta($uid, 'secret-code', true) === $secret_code ){
 	update_user_meta( $uid, 'state', 'active' );
+
+	// Flash message setting
+	$_SESSION['flass_message'] 	= '<strong>Congratulation!</strong> Your account is activated now!';
+	$_SESSION['isset_message'] 	= true;
+	$_SESSION['message_type'] 	= 'success';
 }
 
 ?>
