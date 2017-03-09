@@ -111,7 +111,8 @@
 						<?php if ($_SESSION['isset_message']) { ?>
 							<div class="alert alert-<?php echo $_SESSION['message_type']; ?> alert-dismissible" role="alert">
 							  	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-							  	<?php echo $_SESSION['flass_message']; ?>
+							  	<?php echo $_SESSION['flass_message'];
+							  	$_SESSION['isset_message'] 	= false; ?>
 							</div>
 						<?php } ?>
 					</div><!--/div .wrapper-->
@@ -133,6 +134,21 @@
 			    padding: 10px 20px;
 			    border: 1px solid #ccc;
 			    cursor: pointer;
+			}
+			ul.tcpt-flist {
+			    list-style: none;
+			    padding: 0;
+			    margin: 0;
+			    min-height: 575px;
+			    position: absolute;
+			}
+			.tcpt_single_column ul li.sign-up {
+			    font-size: 25px;
+			    text-align: center;
+			    bottom: 0;
+			    position: absolute;
+			    margin: 0 auto;
+			    left: 40%;
 			}
 		</style>
 		<?php if (!is_user_logged_in()) : ?>
