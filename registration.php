@@ -2,9 +2,9 @@
 /**
 * Template Name: Registration Page
 */
-?>
 
-<?php get_header(); ?>
+
+get_header(); ?>
 <style type="text/css">
 	
 	form#register-form {
