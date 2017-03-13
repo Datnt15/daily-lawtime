@@ -11,7 +11,7 @@
     	<!-- <p class="text-center title-search-list">Types of Search</p> -->
         <div class="panel-group" id="accordion">
         	<div class="panel panel-default">
-		    	<div class="panel-heading">
+		    	<div class="panel-heading active">
 		        	<h4 class="panel-title">
 		       			<a data-toggle="collapse" data-parent="#accordion" href="#collapse7">Judgment</a>
 		            </h4>
@@ -205,9 +205,7 @@
 		</div>
     </div>
     <!-- /#sidebar-wrapper -->
-	<a href="#sidebar-wrapper" class="btn absolute <?php if (is_user_logged_in()) { echo 'is_login_margin'; }?>" id="menu-toggle">
-    	<i class="fa fa-bars" aria-hidden="true"></i>
-    </a>
+	
     <script>
     jQuery(document).ready(function($) {
     	
@@ -344,7 +342,7 @@
 	        	</div>
 	    	</div>
 
-	    	<div id="collapse7" class="panel-collapse collapse">
+	    	<div id="collapse7" class="panel-collapse collapse in">
 	    		<div class="panel-heading">
 					<h3 class="panel-title"> JUDGEMENT SEARCH </h3>
 				</div>

@@ -92,7 +92,7 @@
 				<div class="subheader-color cf">
 					<div class="wrapper cf">
 						<div class="full-header-content full-header-content-no-sidebar">
-							<!-- <div class="col-xs-8 col-xs-offset-2">
+							<div class="col-xs-8 col-xs-offset-2">
 				                <div class="input-group">
 				                    <input type="text" class="form-control input-search-header" name="" id="key" placeholder="Search">
 				                    <span class="input-group-btn">
@@ -101,7 +101,7 @@
 				                        </button>
 				                    </span>
 				                </div>
-				            </div> -->
+				            </div>
 						</div><!--/div .header-content-->
 					</div><!--/div .wrapper-->
 				</div><!--/div .full-header-color-->
