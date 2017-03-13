@@ -14,8 +14,8 @@ Stripe::setApiKey($stripe['private']);
 <style type="text/css">
 	
 	form#register-form {
-	    width: 400px;
-	    margin: 0 auto;
+	    /*width: 400px;
+	    margin: 0 auto;*/
 	    padding: 25px;
 	    background: #fff;
 	    border: 1px solid #ddd;
@@ -51,6 +51,9 @@ Stripe::setApiKey($stripe['private']);
 	    color: #32373c;
 	    outline: 0;
 	    border-radius: 0;
+	}
+	form#register-form select{
+		padding: 16px;
 	}
 	
 	.button-primary {
@@ -207,6 +210,8 @@ Stripe::setApiKey($stripe['private']);
 		}
 
 		?>
+		<div class="col-xs-12 col-sm-6">
+			
 	    	<p>
 	    		<label for="username">Username:</label>
 	    		<input type="text" name="username" value="<?= ( isset( $_POST['username'] ) ? $username : null ) ?>" required>
@@ -261,6 +266,9 @@ Stripe::setApiKey($stripe['private']);
 				</select>
 		    </p>
 
+		</div>
+		<div class="col-xs-12 col-sm-6">
+
 		    <p>
 		    	<label for="company-type">Company Type:</label>
 		    	<select name="company-type" id="company-type">
@@ -270,12 +278,11 @@ Stripe::setApiKey($stripe['private']);
 					<option value="4">Goverment User</option>
 				</select>
 		    </p>
-
 		    <p>
 		    	<label for="company-name">Company Name:</label>
 		    	<input type="text" placeholder="Company Name" name="company-name" id="company-name" value="<?= ( isset( $_POST['company-name'] ) ? $_POST['company-name'] : null ) ?>">
 		    </p>
-
+			
 		    <p>
 		    	<label for="phone-number">Phone Number (*):</label>
 		    	<input type="text" placeholder="000 000 0000" name="phone-number" id="phone-number" pattern="^\d{4,}$" title="Invalid number" value="<?= ( isset( $_POST['phone-number'] ) ? $_POST['phone-number'] : null ) ?>" required="">
@@ -311,11 +318,17 @@ Stripe::setApiKey($stripe['private']);
 		    </div>
      		<?php wp_nonce_field( 'access_token_action', 'access_token' ); ?>
     		<!-- <input type="submit" class="button-primary" name="submit" value="Register"/> -->
-			<button type="submit" class="button-primary">Pay</button>
+		</div>
+		<div class="col-xs-12 col-sm-6">
+			<button type="submit" class="button-primary">Register</button>
+		</div>
+		<div class="col-xs-12 col-sm-6">
 			<div class="error"></div>
 			<div class="success">
-        		Success! Your Stripe token is created! You can register now!
-      		</div>
+	    		Success! Your Stripe token is created! You can register now!
+	  		</div>
+	  	</div>
+		<div class="clearfix"></div>
     	</form>
 	</div>
 </div>

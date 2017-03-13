@@ -139,7 +139,8 @@
 			    list-style: none;
 			    padding: 0;
 			    margin: 0;
-			    min-height: 420px;
+			    min-height: 530px;
+			    height: auto;
 			    position: relative;
 			}
 			.tcpt_single_column ul li.sign-up {

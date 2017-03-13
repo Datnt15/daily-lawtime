@@ -4,7 +4,7 @@
  *
  *  @package lawyeria-lite
  */
-get_header();
+get_header('search');
 if ( get_option( 'show_on_front' ) == 'page' ){?>
 		
 <section id="content">

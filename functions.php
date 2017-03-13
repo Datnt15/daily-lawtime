@@ -441,3 +441,14 @@ function register_session(){
         session_start();
 }
 add_action('init','register_session');
+
+
+add_action('login_form','my_added_login_field');
+function my_added_login_field(){
+    //Output your HTML
+
+    ?>
+    <p>You can type a little note to those logging in here.</p>
+
+    <?php
+} 

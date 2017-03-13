@@ -1011,8 +1011,6 @@ input[name='judge-field'] {
 }
 
 form#register-form {
-    width: 400px;
-    margin: 0 auto;
     padding: 25px;
     background: #fff;
     border: 1px solid #ddd;

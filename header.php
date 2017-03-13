@@ -89,22 +89,6 @@
 				    echo get_theme_mod( 'lawyeria_lite_frontpage_subheader_bg',get_template_directory_uri() . "/images/full-header.jpg" );
 			     }
 			 ?>');">
-				<div class="subheader-color cf">
-					<div class="wrapper cf">
-						<div class="full-header-content full-header-content-no-sidebar">
-							<!-- <div class="col-xs-8 col-xs-offset-2">
-				                <div class="input-group">
-				                    <input type="text" class="form-control input-search-header" name="" id="key" placeholder="Search">
-				                    <span class="input-group-btn">
-				                        <button class="btn btn-default btn-radius0 law-search" type="button">
-				                            <span class="glyphicon glyphicon-search"></span>
-				                        </button>
-				                    </span>
-				                </div>
-				            </div> -->
-						</div><!--/div .header-content-->
-					</div><!--/div .wrapper-->
-				</div><!--/div .full-header-color-->
 				<div class="second-subheader">
 					<div class="wrapper">
 						<h3><?php the_title( ); ?> </h3>
